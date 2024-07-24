@@ -1,7 +1,7 @@
 {
     "name": "@jiangweiye/cloudflare-wasm-yaml",
     "type": "module",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "YAML parser for javascript",
     "author": "",
     "license": "ISC",
@@ -27,6 +27,6 @@
     ],
     "scripts": {
         "build": "esno build/build.ts",
-        "release": "npm run build && npm publish --access public"
+        "release": "npm publish --access public"
     }
 }
