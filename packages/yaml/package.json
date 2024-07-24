@@ -1,0 +1,32 @@
+{
+    "name": "@jiangweiye/cloudflare-wasm-yaml",
+    "type": "module",
+    "version": "0.0.1",
+    "description": "YAML parser for javascript",
+    "author": "",
+    "license": "ISC",
+    "keywords": [
+        "cloudflare",
+        "wasm",
+        "yaml"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/wasm_yaml.d.ts",
+            "import": "./dist/wasm_yaml.js"
+        },
+        "./wasm_yaml_bg.wasm": {
+            "types": "./dist/wasm_yaml_bg.wasm.d.ts",
+            "import": "./dist/wasm_yaml_bg.wasm"
+        }
+    },
+    "main": "./dist/wasm_yaml.js",
+    "types": "./dist/wasm_yaml.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "esno build/build.ts",
+        "release": "npm run build && npm publish --access public"
+    }
+}

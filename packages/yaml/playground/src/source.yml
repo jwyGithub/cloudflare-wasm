@@ -1,0 +1,6 @@
+rules:
+    - name: 'Hello, World!'
+    - description: "This rule always returns 'Hello, World!'"
+    - action: "return 'Hello, World!'"
+
+remote: http://www.baidu.com
