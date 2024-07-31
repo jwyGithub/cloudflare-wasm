@@ -1,0 +1,13 @@
+[package]
+name = "wasm-fetch"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+wasm-bindgen-futures = "0.4"
+futures = "0.3"
+wasm-bindgen = "0.2.92"
+web-sys = { features = ["Request", "Response", "Window"], version = "0.3.69" }
