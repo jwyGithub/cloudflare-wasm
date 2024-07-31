@@ -3,8 +3,9 @@
     "type": "module",
     "version": "0.0.3",
     "description": "YAML parser for javascript",
-    "author": "",
+    "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "ISC",
+    "homepage": "https://github.com/jwyGithub/cloudflare-wasm",
     "keywords": [
         "cloudflare",
         "wasm",
