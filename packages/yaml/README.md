@@ -25,10 +25,11 @@ yarn add @jiangweiye/cloudflare-wasm-yaml
 ## Use
 
 ```typescript
-import { dump, load } from '@jiangweiye/cloudflare-wasm-yaml';
+import init, { dump, load } from '@jiangweiye/cloudflare-wasm-yaml';
 
 export default {
     async fetch(request: Request, env: Env): Promise<Response> {
+        await init();
         const data = load('name: Cloudflare Workers\n');
         data.set('name', 'Cloudflare Workers');
 
