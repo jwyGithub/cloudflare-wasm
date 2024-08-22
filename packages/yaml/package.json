@@ -1,7 +1,7 @@
 {
     "name": "@jiangweiye/cloudflare-wasm-yaml",
     "type": "module",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "YAML parser for javascript",
     "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "ISC",
