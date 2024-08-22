@@ -1,7 +1,7 @@
 {
     "name": "@jiangweiye/cloudflare-wasm-yaml",
     "type": "module",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "YAML parser for javascript",
     "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "ISC",
@@ -16,7 +16,7 @@
             "types": "./dist/wasm_yaml.d.ts",
             "import": "./dist/wasm_yaml.js"
         },
-        "./wasm_yaml_bg.wasm": {
+        "./wasm_yaml.wasm": {
             "types": "./dist/wasm_yaml_bg.wasm.d.ts",
             "import": "./dist/wasm_yaml_bg.wasm"
         }

@@ -1,10 +1,11 @@
 {
-    "name": "@jiangweiye/cloudflare-wasm-yaml",
+    "name": "@jiangweiye/cloudflare-wasm-image",
     "type": "module",
-    "version": "0.0.2",
-    "description": "YAML parser for javascript",
-    "author": "",
+    "version": "0.0.1",
+    "description": "use wasm to process image",
+    "author": "jiangweiye <jiangweiye@outlook.com> (https://github.com/jwyGithub)",
     "license": "ISC",
+    "homepage": "https://github.com/jwyGithub/cloudflare-wasm",
     "keywords": [
         "cloudflare",
         "wasm",

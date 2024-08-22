@@ -2,40 +2,36 @@
 
 Using Wasm in CloudFlare
 
-## Install
+## Packages
 
-### with pnpm
+-   [@jiangweiye/cloudflare-wasm-yaml](#wasm-yaml)
+-   [@jiangweiye/cloudflare-wasm-image](#wasm-image)
 
-```bash
-pnpm add @jiangweiye/cloudflare-wasm-yaml
-```
+### wasm-yaml
 
-### with npm
+使用 wasm 解析 yaml 文件，以及将 yaml 文件转换为 map 对象。
 
-```bash
-npm install @jiangweiye/cloudflare-wasm-yaml
-```
-
-### with yarn
-
-```bash
-yarn add @jiangweiye/cloudflare-wasm-yaml
-```
-
-## example
+[使用示例](https://github.com/jwyGithub/cloudflare-wasm/tree/main/packages/yaml)
 
 ```typescript
-import init, { dump, load } from '@jiangweiye/cloudflare-wasm-yaml';
-import source from './source.yml?raw';
+import { dump, load } from '@jiangweiye/cloudflare-wasm-yaml';
 
-(async () => {
-    await init();
+export default {
+    async fetch(request: Request, env: Env): Promise<Response> {
+        const data = load('name: Cloudflare Workers\n');
+        data.set('name', 'Cloudflare Workers');
 
-    const data = load(source);
-    data.set('name', 'Cloudflare Workers');
+        const output = dump(data);
 
-    const output = dump(data);
-
-    console.log('output', output);
-})();
+        return new Response(output, {
+            headers: { 'content-type': 'text/plain' }
+        });
+    }
+};
 ```
+
+### wasm-image
+
+使用 wasm 处理图片，支持图片转换，压缩， 等。
+
+[使用示例](https://github.com/jwyGithub/cloudflare-wasm/tree/main/packages/image)
